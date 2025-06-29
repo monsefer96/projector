@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="fr-BE" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineMax Projecteur de Poche - Cinéma Portable 4K</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .cta-button {
+            box-shadow: 0 10px 30px -10px rgba(124, 58, 237, 0.6);
+            transition: all 0.3s ease;
+        }
+        .cta-button:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 15px 35px -10px rgba(124, 58, 237, 0.8);
+        }
+        .glow {
+            text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+        }
+        .animated-gif {
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 1rem;
+            box-shadow: 0 0 20px rgba(124, 58, 237, 0.3);
+        }
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+        .faq-item .faq-icon {
+            transition: transform 0.3s ease;
+        }
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+        .form-input {
+            background-color: #1f2937; /* bg-gray-800 */
+            border-color: #4b5563; /* border-gray-600 */
+            border-width: 1px; /* Ensure border is always visible */
+            padding: 0.75rem 1rem; /* Increased padding for larger look (from p-2 to py-3 px-4) */
+        }
+        .form-input:focus {
+            --tw-ring-color: #8b5cf6; /* ring-indigo-500 */
+            border-color: #8b5cf6; /* border-indigo-500 */
+            outline: none; /* Remove default outline */
+            box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.5); /* Add a clearer focus ring */
+        }
+        .feature-icon {
+            background: linear-gradient(145deg, rgba(124, 58, 237, 0.1), rgba(167, 139, 250, 0.1));
+            border: 1px solid rgba(124, 58, 237, 0.2);
+            border-radius: 0.75rem;
+            padding: 0.75rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white antialiased">
+
+    <div class="bg-indigo-600 text-center py-2 px-4 text-sm font-semibold">
+        OFFRE À DURÉE LIMITÉE : 75% DE RÉDUCTION + LIVRAISON GRATUITE !
+    </div>
+
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+        <main class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start">
+            
+            <div class="flex flex-col gap-4">
+                <div class="aspect-w-16 aspect-h-9">
+                    <img id="mainImage" src="https://img.kwcdn.com/product/fancy/95ebb4eb-7c91-4320-9b33-db1b8145c2e4.jpg" alt="Mini projecteur affichant un film sur un mur" class="w-full h-full object-cover rounded-xl shadow-2xl border-2 border-gray-700">
+                </div>
+                <div class="grid grid-cols-4 gap-2">
+                    <img src="https://img.kwcdn.com/product/fancy/95ebb4eb-7c91-4320-9b33-db1b8145c2e4.jpg" alt="Vue principale du projecteur" class="thumbnail-img cursor-pointer rounded-md border-2 border-indigo-500 hover:opacity-80 transition-opacity">
+                    <img src="https://i.imgur.com/HwfmmSD.png" alt="Projecteur montrant un film au plafond" class="thumbnail-img cursor-pointer rounded-md border-2 border-transparent hover:opacity-80 transition-opacity">
+                    <img src="https://i.imgur.com/9YDcoam.png" alt="Projecteur tenu en main" class="thumbnail-img cursor-pointer rounded-md border-2 border-transparent hover:opacity-80 transition-opacity">
+                    <img src="https://i.imgur.com/QsvxMIg.png" alt="Famille profitant d'un film projeté sur le mur" class="thumbnail-img cursor-pointer rounded-md border-2 border-transparent hover:opacity-80 transition-opacity">
+                </div>
+            </div>
+
+            <div class="flex flex-col gap-4">
+                <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight glow">Projecteur de Poche CineMax 4K</h1>
+                <p class="text-gray-300 text-lg">Transformez n'importe quelle pièce en un cinéma époustouflant.</p>
+
+                <div class="flex items-center gap-2">
+                    <div class="flex text-yellow-400">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                    </div>
+                    <span class="text-sm text-gray-400">1 288 Avis</span>
+                </div>
+
+                <div class="my-4 p-4 bg-gray-800/50 border border-gray-700 rounded-lg">
+                    <div class="flex items-baseline gap-2">
+                        <span class="text-4xl font-bold text-green-400">€9.99</span>
+                        <span class="text-xl font-semibold text-gray-400 line-through">€52.99</span>
+                    </div>
+                    <div class="mt-2 text-center bg-red-500/80 text-white font-bold py-2 px-4 rounded-md">
+                        <div id="countdown" class="flex justify-center items-center gap-2 text-lg">
+                            <span>L'offre se termine dans :</span>
+                            <span id="hours" class="bg-gray-900 px-2 py-1 rounded">07</span>:
+                            <span id="minutes" class="bg-gray-900 px-2 py-1 rounded">59</span>:
+                            <span id="seconds" class="bg-gray-900 px-2 py-1 rounded">55</span>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#order-form" class="w-full text-center bg-gradient-to-r from-purple-500 to-indigo-600 cta-button text-white text-xl font-bold py-4 px-8 rounded-xl flex items-center justify-center gap-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 16 4 4 4-4M7 20V4M21 8l-4-4-4 4M17 4v16"/></svg>
+                    PROFITEZ DE MON REMISE DE 75%
+                </a>
+                <div id="stock-indicator" class="text-center text-sm text-yellow-400 font-semibold mt-2">🔥 Se vend rapidement ! 27 personnes l'ont dans leur panier.</div>
+            </div>
+        </main>
+
+        <section class="mt-16 md:mt-24">
+            <h2 class="text-3xl font-bold text-center mb-12 glow">Pourquoi vous allez adorer le projecteur CineMax</h2>
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+                <div class="bg-gray-800 p-6 rounded-lg border border-gray-700">
+                    <div class="text-indigo-400 mb-4 inline-block">
+                       <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Visuels 4K Époustouflants</h3>
+                    <p class="text-gray-400">Découvrez une image de qualité cinéma à couper le souffle, de 130 pouces. Parfait pour les films, les jeux et les présentations.</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg border border-gray-700">
+                    <div class="text-indigo-400 mb-4 inline-block">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">WiFi 6 Sans Latence</h3>
+                    <p class="text-gray-400">Diffusez votre contenu préféré sans mise en mémoire tampon frustrante ni décalage, grâce à la dernière technologie WiFi 6.</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg border border-gray-700">
+                    <div class="text-indigo-400 mb-4 inline-block">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.174 6.812a1 1 0 0 0-1.265.517L17.5 12h-11l-2.409-4.671a1 1 0 0 0-1.78-.912l-1.42 2.47a1 1 0 0 0 .517 1.265l1.42 2.471a1 1 0 0 0 1.78.912l2.409-4.671h11l2.409 4.671a1 1 0 0 0 1.78-.912l1.42-2.47a1 1 0 0 0-.517-1.265z"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Projetez Partout</h3>
+                    <p class="text-gray-400">Avec une rotation à 180° et une correction de trapèze automatique, trouvez facilement l'angle de vision parfait sur n'importe quelle surface.</p>
+                </div>
+            </div>
+        </section>
+        <section class="mt-16 md:mt-24">
+             <div class="bg-gray-800 p-6 rounded-xl border border-gray-700 grid md:grid-cols-2 gap-8 items-center">
+                 <div>
+                    <h2 class="text-3xl font-bold mb-4 glow">Votre Divertissement, Amélioré.</h2>
+                    <p class="text-gray-300 mb-6">Le projecteur CineMax n'est pas seulement pour les films. Connectez votre console de jeu préférée pour une expérience immersive sur grand écran, ou diffusez des émissions directement depuis votre téléphone. Avec des haut-parleurs intégrés et Bluetooth 5.0, votre audio sera aussi épique que les visuels.</p>
+                    <ul class="space-y-3 text-gray-400">
+                        <li class="flex items-center gap-3"><span class="text-green-400">✓</span>Système d'exploitation Android 11 intégré</li>
+                        <li class="flex items-center gap-3"><span class="text-green-400">✓</span>Se connecte aux téléphones, ordinateurs portables, consoles</li>
+                        <li class="flex items-center gap-3"><span class="text-green-400">✓</span>Haut-parleurs Hi-Fi et Bluetooth 5.0</li>
+                    </ul>
+                 </div>
+                 <div>
+                    <img src="https://i.imgur.com/wfz0p99.png" alt="GIF animé montrant la rotation à 180 degrés et la configuration facile du projecteur" class="w-full rounded-lg animated-gif">
+                 </div>
+             </div>
+        </section>
+
+        <section class="mt-16 md:mt-24">
+            <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center bg-gray-800/50 p-8 rounded-xl border border-gray-700">
+                <img src="https://i.imgur.com/QsvxMIg.png" alt="Une famille regardant un film ensemble avec le projecteur CineMax" class="rounded-lg shadow-lg w-full">
+                <div class="text-center md:text-left">
+                    <h2 class="text-3xl font-bold mb-4 glow">Créez des souvenirs de famille inoubliables</h2>
+                    <p class="text-gray-300 mb-6 text-lg">Transformez votre salon en un cinéma magique et regardez les visages de votre famille s'illuminer. Des aventures animées aux superproductions, chaque soirée cinéma devient un événement spécial. Il suffit de prendre le popcorn et de se blottir !</p>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-3">
+                            <div class="feature-icon text-indigo-400"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.78l1.41 1.42a1 1 0 0 0 1.41 0l1.42-1.42a4 4 0 1 1 4.78 4.78L12 17.22l-8.15-8.6Z"/></svg></div>
+                            <p class="text-gray-400">Apportez la magie du grand écran à la maison.</p>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="feature-icon text-indigo-400"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2Z"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><path d="M9 9h.01"/><path d="M15 9h.01"/></svg></div>
+                            <p class="text-gray-400">Assez facile à utiliser pour toute la famille.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mt-16 md:mt-24">
+            <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center bg-gray-800/50 p-8 rounded-xl border border-gray-700">
+                <div class="text-center md:text-left md:order-2">
+                    <h2 class="text-3xl font-bold mb-4 glow">L'Expérience Ultime du Jour de Match</h2>
+                    <p class="text-gray-300 mb-6 text-lg">Ne vous contentez pas de regarder le match, vivez-le. Projetez le match sur un écran géant de 130 pouces et ressentez le rugissement du stade dans votre propre maison. Avec le WiFi 6 sans latence, vous ne manquerez pas une seule seconde de l'action.</p>
+                     <div class="space-y-4">
+                        <div class="flex items-center gap-3">
+                            <div class="feature-icon text-green-400"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 12-2-5L8 7l4 5 2-5 2 5h-2z"/><path d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20Z"/></svg></div>
+                            <p class="text-gray-400">L'action grandeur nature vous donne l'impression d'y être.</p>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="feature-icon text-green-400"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.33-.04-3.08.69-.13 1.38-.34 2.04-.62.9-1.6 1.9-4.4 1.9-4.4s.95-1.24 2.4-2.4c.54-.42 1.1-.77 1.66-1.06-.33.32-.63.68-.89 1.07l-1.8 2.95c-.34.56-.02 1.28.58 1.62.9.5 2.1.3 2.6-.6l2.1-3.6c.3-.5.2-1.1-.2-1.5s-1-.5-1.5-.2l-3.6 2.1c-.9.5-1.1 1.7-.6 2.6.34.6.96.98 1.62.58.34-.2.64-.4.92-.62l2.95-1.8c.4-.25.85-.43 1.3-.53.08.42.15.83.19 1.24.07.73.04 1.46-.04 2.16-.43 3.58-1.3 6.4-2.8 8.3-2.2 2.8-5.7 4.5-9.6 4.5-2 0-3.9-.6-5.4-1.8Z"/></svg></div>
+                            <p class="text-gray-400">Organisez les meilleures soirées de visionnage que vos amis aient jamais vues.</p>
+                        </div>
+                    </div>
+                </div>
+                <img src="https://i.imgur.com/tchcvWQ.png" alt="Amis acclamant en regardant un match de football sur le projecteur" class="rounded-lg shadow-lg w-full md:order-1">
+            </div>
+        </section>
+        
+        <section class="mt-16 md:mt-24">
+            <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center bg-gray-800/50 p-8 rounded-xl border border-gray-700">
+                <img src="https://i.imgur.com/jfwBk8a.png" alt="Un professionnel présentant dans une salle de réunion avec le projecteur CineMax" class="rounded-lg shadow-lg w-full">
+                <div class="text-center md:text-left">
+                    <h2 class="text-3xl font-bold mb-4 glow">Présentez avec Confiance et Impact</h2>
+                    <p class="text-gray-300 mb-6 text-lg">Laissez derrière vous l'équipement encombrant et coûteux. Le CineMax est votre puissant projecteur portable pour les présentations. Entrez dans n'importe quelle réunion, connectez-vous en quelques secondes et présentez votre pitch avec des visuels clairs et à grande échelle qui impressionneront n'importe quel client.</p>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-3">
+                             <div class="feature-icon text-teal-400"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8v2Z"/><path d="M22 12a10 10 0 0 0-10-10v2a8 8 0 0 1 8 8h2Z"/><path d="M12 2a10 10 0 0 0-10 10h2a8 8 0 0 1 8-8V2Z"/><path d="m14 10 3 3-3 3"/><path d="M3 10h11"/></svg></div>
+                             <p class="text-gray-400">Captez l'attention avec un affichage lumineux et clair.</p>
+                        </div>
+                        <div class="flex items-center gap-3">
+                             <div class="feature-icon text-teal-400"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10H7a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h14"/><path d="M3 10h2"/><path d="M5 6v8"/><path d="M17 6v12"/></svg></div>
+                             <p class="text-gray-400">Conception ultra-portable pour les professionnels en déplacement.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mt-16 md:mt-24">
+            <h2 class="text-3xl font-bold text-center mb-12 glow">Dites Adieu à Votre Petite Télévision</h2>
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-gray-800 rounded-lg overflow-hidden border border-gray-700">
+                    <table class="w-full text-left">
+                        <thead class="bg-gray-700/50">
+                            <tr>
+                                <th class="p-4 font-bold">Caractéristique</th>
+                                <th class="p-4 font-bold text-center text-indigo-400">Projecteur CineMax</th>
+                                <th class="p-4 font-bold text-center">Télévision Traditionnelle</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-700">
+                            <tr>
+                                <td class="p-4 font-semibold">Taille de l'écran</td>
+                                <td class="p-4 text-center text-green-400">Jusqu'à 130 pouces</td>
+                                <td class="p-4 text-center text-red-400">Fixe (ex. : 65")</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 font-semibold">Portabilité</td>
+                                <td class="p-4 text-center text-green-400">Emmenez-le partout</td>
+                                <td class="p-4 text-center text-red-400">Fixé au mur</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 font-semibold">Prix</td>
+                                <td class="p-4 text-center text-green-400">€9.99 (Offre Spéciale)</td>
+                                <td class="p-4 text-center text-red-400">€500 - €2000+</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 font-semibold">Angle de vision</td>
+                                <td class="p-4 text-center text-green-400">Rotation flexible à 180°</td>
+                                <td class="p-4 text-center text-red-400">Position fixe</td>
+                            </tr>
+                             <tr>
+                                <td class="p-4 font-semibold">Installation</td>
+                                <td class="p-4 text-center text-green-400">Branchez et utilisez</td>
+                                <td class="p-4 text-center text-red-400">Nécessite un montage</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section class="mt-16 md:mt-24">
+            <h2 class="text-3xl font-bold text-center mb-12 glow">Aimé par plus de 1 200 clients satisfaits</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-800 p-6 rounded-lg border border-gray-700">
+                    <div class="flex items-center mb-4">
+                        <img src="https://placehold.co/48x48/7e22ce/ffffff?text=JS" class="w-12 h-12 rounded-full mr-4" alt="Critique">
+                        <div>
+                            <p class="font-bold">Jessica S.</p>
+                            <div class="flex text-yellow-400 mt-1">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-300">"Absolument époustouflée par la qualité pour ce prix. Mes enfants adorent regarder des films au plafond de leur chambre. Un véritable bouleversement pour les soirées en famille !"</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg border border-gray-700">
+                    <div class="flex items-center mb-4">
+                        <img src="https://placehold.co/48x48/7e22ce/ffffff?text=MB" class="w-12 h-12 rounded-full mr-4" alt="Critique">
+                        <div>
+                            <p class="font-bold">Mike B.</p>
+                             <div class="flex text-yellow-400 mt-1">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-300">"Je l'utilise pour jouer et c'est génial. L'image est super claire et il n'y a pas de latence. Il se connecte à mon téléphone si facilement. 10/10, je le recommande."</p>
+                </div>
+                 <div class="bg-gray-800 p-6 rounded-lg border border-gray-700">
+                    <div class="flex items-center mb-4">
+                        <img src="https://placehold.co/48x48/7e22ce/ffffff?text=AC" class="w-12 h-12 rounded-full mr-4" alt="Critique">
+                        <div>
+                            <p class="font-bold">Chloé T.</p>
+                             <div class="flex text-yellow-400 mt-1">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-300">"Si portable ! Je l'ai emmené en camping et nous avons eu une soirée cinéma dans la tente. La batterie a duré assez longtemps pour un film complet. L'image était incroyable même sur le tissu de la tente."</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="order-form" class="mt-16 md:mt-24 max-w-2xl mx-auto scroll-mt-20">
+            <div class="bg-gray-800 border border-indigo-500/50 rounded-xl shadow-2xl p-6 md:p-8">
+                 <h2 class="text-3xl font-bold text-center mb-1 glow">Oui, je veux mon CineMax !</h2>
+                 <p class="text-center text-gray-400 mb-6">Remplissez vos informations de livraison ci-dessous pour bénéficier de votre réduction de 50 %.</p>
+                 <form action="https://pay.canale.shop/?a=115601&c=385678&co=317488&mt=26" method="GET" class="grid grid-cols-1 gap-4">
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-300 border-b border-gray-600 pb-2 mb-3">Informations de contact</h3>
+                        <div class="mb-4">
+                            <label for="email" class="block text-sm font-medium text-gray-400">Adresse e-mail</label>
+                            <input type="email" name="t2" id="email" required class="form-input mt-1 block w-full rounded-md border-gray-600 shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-500 focus:ring-opacity-50" placeholder="vous@exemple.com">
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-sm font-medium text-gray-400">Numéro de téléphone</label>
+                            <input type="tel" name="t3" id="phone" value="" required class="form-input mt-1 block w-full rounded-md border-gray-600 shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-500 focus:ring-opacity-50" placeholder="+32 XXX XXX XXX">
+                        </div>
+                    </div>
+
+                     <div>
+                         <h3 class="text-lg font-semibold text-gray-300 border-b border-gray-600 pb-2 mb-3 mt-4">Adresse de livraison</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label for="first_name" class="block text-sm font-medium text-gray-400">Prénom</label>
+                                <input type="text" name="t4" id="first_name" required class="form-input mt-1 block w-full rounded-md border-gray-600 shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-500 focus:ring-opacity-50" placeholder="Jean">
+                            </div>
+                            <div>
+                                <label for="last_name" class="block text-sm font-medium text-gray-400">Nom de famille</label>
+                                <input type="text" name="t5" id="last_name" required class="form-input mt-1 block w-full rounded-md border-gray-600 shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-500 focus:ring-opacity-50" placeholder="Dupont">
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <label for="address" class="block text-sm font-medium text-gray-400">Adresse</label>
+                            <input type="text" name="t1" id="address" required class="form-input mt-1 block w-full rounded-md border-gray-600 shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-500 focus:ring-opacity-50" placeholder="123 Rue du Cinéma">
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+                             <div>
+                                <label for="city" class="block text-sm font-medium text-gray-400">Ville</label>
+                                <input type="text" name="t8" id="city" required class="form-input mt-1 block w-full rounded-md border-gray-600 shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-500 focus:ring-opacity-50">
+                            </div>
+                             <div>
+                                <label for="zip" class="block text-sm font-medium text-gray-400">Code postal</label>
+                                <input type="text" name="t7" id="zip" required class="form-input mt-1 block w-full rounded-md border-gray-600 shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-500 focus:ring-opacity-50">
+                            </div>
+                             <div>
+                                <label for="country" class="block text-sm font-medium text-gray-400">Pays</label>
+                                <input type="text" name="t6" id="country" required class="form-input mt-1 block w-full rounded-md border-gray-600 shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-500 focus:ring-opacity-50">
+                            </div>
+                        </div>
+                    </div>
+                     
+                    <button type="submit" class="w-full mt-6 bg-gradient-to-r from-green-500 to-teal-500 hover:from-green-600 hover:to-teal-600 cta-button text-white text-xl font-bold py-4 px-8 rounded-xl flex items-center justify-center gap-3">
+                        PROCÉDER AU PAIEMENT
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                    </button>
+                    <div class="mt-2 text-center text-xs text-gray-500 flex items-center justify-center gap-2">
+                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                        <span>Paiement sécurisé crypté SSL</span>
+                    </div>
+                 </form>
+            </div>
+        </section>
+
+         <section class="mt-16 md:mt-24 text-center bg-gray-800/50 p-8 rounded-xl border-2 border-dashed border-indigo-500">
+             <img src="https://placehold.co/100x100/1a202c/ffffff?text=30-Day+Guarantee" alt="Sceau de garantie" class="mx-auto mb-6 w-24 h-24">
+             <h2 class="text-3xl font-bold mb-4 glow">Garantie de remboursement de 30 jours</h2>
+             <p class="text-gray-400 max-w-2xl mx-auto">Nous sommes si confiants que vous allez adorer le projecteur de poche CineMax que nous offrons une garantie de remboursement de 30 jours, sans poser de questions. Si vous n'êtes pas entièrement satisfait, renvoyez-le pour un remboursement complet.</p>
+         </section>
+
+         <section class="mt-16 md:mt-24 max-w-3xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-8 glow">Questions Fréquemment Posées</h2>
+            <div class="space-y-4">
+                <div class="faq-item bg-gray-800 border border-gray-700 rounded-lg">
+                    <button class="faq-question w-full text-left p-4 flex justify-between items-center font-semibold text-lg">
+                        <span>Est-ce difficile à configurer ?</span>
+                        <span class="faq-icon text-indigo-400 text-2xl font-light transform transition-transform">+</span>
+                    </button>
+                    <div class="faq-answer overflow-hidden max-h-0 transition-all duration-300 ease-in-out px-4 text-gray-400">
+                        Pas du tout ! C'est du "plug-and-play". Il suffit de le brancher, de le connecter à votre WiFi et de commencer à diffuser. La correction de trapèze automatique fait tout le travail difficile d'alignement de l'image pour vous.
+                    </div>
+                </div>
+                <div class="faq-item bg-gray-800 border border-gray-700 rounded-lg">
+                    <button class="faq-question w-full text-left p-4 flex justify-between items-center font-semibold text-lg">
+                        <span>Quels appareils puis-je connecter ?</span>
+                         <span class="faq-icon text-indigo-400 text-2xl font-light transform transition-transform">+</span>
+                    </button>
+                    <div class="faq-answer overflow-hidden max-h-0 transition-all duration-300 ease-in-out px-4 text-gray-400">
+                       Vous pouvez connecter presque tout ! Il fonctionne avec les iPhones, les téléphones Android, les ordinateurs portables (Windows/Mac), les consoles de jeux (PS5, Xbox, Nintendo Switch) et tout appareil doté d'une sortie HDMI.
+                    </div>
+                </div>
+                 <div class="faq-item bg-gray-800 border border-gray-700 rounded-lg">
+                    <button class="faq-question w-full text-left p-4 flex justify-between items-center font-semibold text-lg">
+                        <span>Quelle est la qualité du son ?</span>
+                         <span class="faq-icon text-indigo-400 text-2xl font-light transform transition-transform">+</span>
+                    </button>
+                    <div class="faq-answer overflow-hidden max-h-0 transition-all duration-300 ease-in-out px-4 text-gray-400">
+                        Le haut-parleur Hi-Fi intégré est étonnamment puissant et clair pour sa taille. Pour une expérience encore plus immersive, vous pouvez vous connecter instantanément à n'importe quel haut-parleur ou casque Bluetooth en utilisant le BT5.0 intégré.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer class="bg-gray-800 mt-16 border-t border-gray-700">
+        <div class="container mx-auto py-6 px-4 text-center text-gray-400 text-sm">
+            <p>&copy; 2025 Canale.shop. Tous droits réservés.</p>
+            <div class="mt-2 space-x-4">
+                <a href="privacy-policy.html" class="hover:text-white">Politique de confidentialité</a>
+                <span>|</span>
+                <a href="terms-of-service.html" class="hover:text-white">Conditions d'utilisation</a>
+                <span>|</span>
+                <a href="contact-us.html" class="hover:text-white">Nous contacter</a>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // --- Countdown Timer ---
+            const countdownElement = document.getElementById('countdown');
+            if(countdownElement) {
+                const hoursEl = document.getElementById('hours');
+                const minutesEl = document.getElementById('minutes');
+                const secondsEl = document.getElementById('seconds');
+                
+                let time = 8 * 60 * 60; // 8 hours in seconds
+
+                const timerInterval = setInterval(() => {
+                    if (time <= 0) {
+                        clearInterval(timerInterval);
+                        document.getElementById('countdown').innerHTML = "<span>L'offre est terminée !</span>";
+                        return;
+                    }
+
+                    let hours = Math.floor(time / 3600);
+                    let minutes = Math.floor((time % 3600) / 60);
+                    let seconds = time % 60;
+                    
+                    hoursEl.textContent = String(hours).padStart(2, '0');
+                    minutesEl.textContent = String(minutes).padStart(2, '0');
+                    secondsEl.textContent = String(seconds).padStart(2, '0');
+                    
+                    time--;
+                }, 1000);
+            }
+
+            // --- Stock Indicator ---
+            const stockIndicator = document.getElementById('stock-indicator');
+            if(stockIndicator){
+                 setInterval(() => {
+                    const randomViewers = Math.floor(Math.random() * (45 - 20 + 1) + 20);
+                    stockIndicator.innerHTML = `🔥 Se vend rapidement ! ${randomViewers} personnes l'ont dans leur panier.`;
+                }, Math.random() * (8000 - 3000) + 3000); // Update every 3-8 seconds
+            }
+
+            // --- Image Gallery ---
+            const mainImage = document.getElementById('mainImage');
+            const thumbnails = document.querySelectorAll('.thumbnail-img');
+
+            thumbnails.forEach(thumb => {
+                thumb.addEventListener('click', function() {
+                    mainImage.src = this.src;
+                    // Update active border style
+                    thumbnails.forEach(t => t.classList.remove('border-indigo-500'));
+                    this.classList.add('border-indigo-500');
+                });
+            });
+
+            // --- FAQ Accordion ---
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    const currentlyActive = document.querySelector('.faq-item.active');
+                    if (currentlyActive && currentlyActive !== item) {
+                        currentlyActive.classList.remove('active');
+                    }
+                    item.classList.toggle('active');
+                });
+            });
+
+        });
+		document.querySelector('form').addEventListener('submit', function(e) {
+    e.preventDefault(); // Stop default form behavior
+
+    const get = id => encodeURIComponent(document.getElementById(id).value.trim());
+
+    const redirectUrl = `https://pay.canale.shop/?a=115601&c=385678&co=317488&mt=26&s5=CineMax 4K Pocket Projector___https://i.imgur.com/RN5jhjA.jpeg` +
+      `&t4=${get('first_name')}` +
+      `&t5=${get('last_name')}` +
+      `&t6=${get('country')}` +
+      `&t7=${get('zip')}` +
+      `&t8=${get('city')}` +
+      `&t1=${get('address')}` +
+      `&t2=${get('email')}` +
+      `&t3=${get('phone')}`;
+
+    window.location.href = redirectUrl;
+  });
+    </script>
+</body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paiement Sécurisé - 150GB stockageavie à Vie</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i>☁️</i> stockageavie
+                </div>
+                <div class="countdown" id="countdown">
+                    Offre expire dans: <span id="timer">23:59:59</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="checkout-section">
+        <div class="container">
+            <div class="checkout-header">
+                <h1>Finaliser Votre Commande</h1>
+                <p>Vous êtes à un pas de bénéficier de 150 Go stockageavie à vie pour seulement 1€</p>
+            </div>
+
+            <div class="checkout-grid">
+                <div class="order-summary">
+                    <h3>Votre Commande</h3>
+                    <div class="order-item">
+                        <div class="product-info">
+                            <h4>stockageavie 150GB - Accès à Vie</h4>
+                            <p>Stockage permanent • Synchronisation complète • Sécurité maximale</p>
+                        </div>
+                        <div class="product-price">1€</div>
+                    </div>
+                    <div class="order-total">
+                        <div class="total-line">
+                            <span>Sous-total:</span>
+                            <span>1€</span>
+                        </div>
+                        <div class="total-line">
+                            <span>Taxes:</span>
+                            <span>0€</span>
+                        </div>
+                        <div class="total-line final">
+                            <span>Total:</span>
+                            <span>1€</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="payment-form-container">
+                    <form class="payment-form" id="paymentForm">
+                        <div class="form-section">
+                            <h3>Informations Personnelles</h3>
+                            <div class="form-group">
+                                <label for="email">Adresse Email *</label>
+                                <input type="email" id="email" name="email" required placeholder="votre@email.com">
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName">Prénom *</label>
+                                    <input type="text" id="firstName" name="firstName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">Nom *</label>
+                                    <input type="text" id="lastName" name="lastName" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h3>Informations de Paiement</h3>
+                            <div class="form-group">
+                                <label for="cardNumber">Numéro de Carte *</label>
+                                <input type="text" id="cardNumber" name="cardNumber" required placeholder="1234 5678 9012 3456" maxlength="19">
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="expiryDate">Date d'Expiration *</label>
+                                    <input type="text" id="expiryDate" name="expiryDate" required placeholder="MM/AA" maxlength="5">
+                                </div>
+                                <div class="form-group">
+                                    <label for="cvv">CVV *</label>
+                                    <input type="text" id="cvv" name="cvv" required placeholder="123" maxlength="3">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="security-badges">
+                            <div class="security-item">
+                                <span>🔒</span> Paiement Sécurisé SSL
+                            </div>
+                            <div class="security-item">
+                                <span>🛡️</span> Garantie 30 Jours
+                            </div>
+                            <div class="security-item">
+                                <span>⭐</span> 4.9/5 Satisfaction
+                            </div>
+                        </div>
+
+                        <button type="submit" class="cta-button payment-btn">
+                            🚀 Confirmer le Paiement - 1€
+                        </button>
+
+                        <p class="security-note">
+                            Votre paiement est sécurisé et crypté. Nous ne stockons jamais vos informations bancaires.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="guarantee-section">
+        <div class="container">
+            <div class="guarantee-grid">
+                <div class="guarantee-item">
+                    <div class="guarantee-icon">✅</div>
+                    <h4>Garantie Satisfait ou Remboursé 30 Jours</h4>
+                    <p>Si vous n'êtes pas satisfait, nous vous remboursons intégralement.</p>
+                </div>
+                <div class="guarantee-item">
+                    <div class="guarantee-icon">🔒</div>
+                    <h4>Paiement 100% Sécurisé</h4>
+                    <p>Vos données sont protégées par le cryptage SSL avancé.</p>
+                </div>
+                <div class="guarantee-item">
+                    <div class="guarantee-icon">⚡</div>
+                    <h4>Activation Immédiate</h4>
+                    <p>Recevez vos accès par email dans les 2 minutes suivant le paiement.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>stockageavie 150GB</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="index.html#features">Fonctionnalités</a></li>
+                        <li><a href="index.html#testimonials">Témoignages</a></li>
+                        <li><a href="index.html#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Support Client</h3>
+                    <ul class="footer-links">
+                        <li><a href="support.html">Centre d'aide</a></li>
+                        <li><a href="support.html">Contactez-nous</a></li>
+                        <li><a href="refund.html">Politique de remboursement</a></li>
+                        <li><a href="privacy.html">Mentions légales</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>À Propos</h3>
+                    <ul class="footer-links">
+                        <li><a href="terms.html">Conditions d'utilisation</a></li>
+                        <li><a href="privacy.html">Politique de confidentialité</a></li>
+                        <li><a href="support.html">Presse</a></li>
+                        <li><a href="support.html">Carrières</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact</h3>
+                    <ul class="footer-links">
+                        <li>📧 support@stockageavie.shop</li>
+                        <li>🕒 Support 24h/24 et 7j/7</li>
+                        <li>⚡ Réponse sous 1 heure</li>
+                        <li>🌍 Basé en France</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 stockageavie France. Tous droits réservés. | Société enregistrée sous le numéro RCS Paris 123 456 789</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('paymentForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = document.querySelector('.payment-btn');
+            btn.innerHTML = '⏳ Traitement en cours...';
+            btn.disabled = true;
+            
+            setTimeout(() => {
+                window.location.href = 'thankyou.html';
+            }, 2000);
+        });
+
+        document.getElementById('cardNumber').addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\s+/g, '').replace(/[^0-9]/gi, '');
+            let formattedValue = value.match(/.{1,4}/g)?.join(' ');
+            if (formattedValue) {
+                e.target.value = formattedValue;
+            }
+        });
+
+        document.getElementById('expiryDate').addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\//g, '').replace(/[^0-9]/gi, '');
+            if (value.length >= 2) {
+                value = value.substring(0, 2) + '/' + value.substring(2, 4);
+            }
+            e.target.value = value;
+        });
+    </script>
+</body>
+</html>

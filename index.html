@@ -3,244 +3,329 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Réactivez Votre Puissance Masculine | Offre Limitée</title>
-    <!-- Load Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <title>Questionnaire Santé & Vitalité Masculine</title>
     <style>
-        :root {
-            --primary-color: #22c55e; /* Strong Green */
-            --secondary-color: #1e40af; /* Deep Blue */
-            --background-dark: #1f2937; /* Dark Gray/Blue */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
+        
         body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--background-dark);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
         }
-        .cta-button {
+        
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: #2c3e50;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            opacity: 0.9;
+            font-size: 14px;
+        }
+        
+        .progress-bar {
+            height: 5px;
+            background: #ecf0f1;
+            position: relative;
+        }
+        
+        .progress {
+            height: 100%;
+            background: #3498db;
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+        
+        .survey-content {
+            padding: 30px;
+        }
+        
+        .question {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        .question.active {
+            display: block;
+        }
+        
+        .question h3 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+        
+        .options {
+            display: grid;
+            gap: 12px;
+        }
+        
+        .option-btn {
+            padding: 15px 20px;
+            border: 2px solid #ecf0f1;
+            border-radius: 10px;
+            background: white;
+            cursor: pointer;
             transition: all 0.3s ease;
-            box-shadow: 0 10px 20px rgba(34, 197, 94, 0.4);
-            animation: pulse-shadow 2s infinite;
+            text-align: left;
+            font-size: 14px;
         }
+        
+        .option-btn:hover {
+            border-color: #3498db;
+            background: #f8f9fa;
+        }
+        
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 25px;
+        }
+        
+        .nav-btn {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary {
+            background: #3498db;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: #2980b9;
+        }
+        
+        .btn-secondary {
+            background: #95a5a6;
+            color: white;
+        }
+        
+        .btn-secondary:hover {
+            background: #7f8c8d;
+        }
+        
+        .results {
+            display: none;
+            padding: 30px;
+            text-align: center;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        .results h2 {
+            color: #27ae60;
+            margin-bottom: 15px;
+        }
+        
+        .results p {
+            color: #7f8c8d;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        .cta-button {
+            background: #e74c3c;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            margin-top: 15px;
+        }
+        
         .cta-button:hover {
-            transform: translateY(-2px) scale(1.02);
-            box-shadow: 0 15px 30px rgba(34, 197, 94, 0.6);
+            background: #c0392b;
         }
-        @keyframes pulse-shadow {
-            0% { box-shadow: 0 10px 20px rgba(34, 197, 94, 0.4); }
-            50% { box-shadow: 0 10px 30px rgba(34, 197, 94, 0.6); }
-            100% { box-shadow: 0 10px 20px rgba(34, 197, 94, 0.4); }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
-        .timer-unit {
-            background-color: #0c0a09; /* Stone 950 */
-            border: 2px solid #a1a1aa; /* Zinc 400 */
+        
+        .privacy {
+            text-align: center;
+            padding: 20px;
+            font-size: 12px;
+            color: #95a5a6;
+            border-top: 1px solid #ecf0f1;
         }
     </style>
 </head>
-<body class="min-h-screen p-4 sm:p-8">
-
-    <div class="max-w-3xl mx-auto bg-white rounded-xl shadow-2xl overflow-hidden">
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Questionnaire Santé & Vitalité Masculine</h1>
+            <p>Découvrez des solutions naturelles pour améliorer votre bien-être</p>
+        </div>
         
-        <!-- HEADER / HERO SECTION -->
-        <header class="bg-gradient-to-br from-gray-900 to-gray-700 text-white p-6 sm:p-10 text-center border-b-4 border-yellow-500">
-            <!-- Scarcity Banner -->
-            <div class="bg-red-600 text-white font-extrabold text-sm sm:text-lg p-2 rounded-full inline-block mb-4 shadow-xl uppercase animate-pulse">
-                🔥 OFFRE SPÉCIALE EN COURS - NE RATEZ PAS ÇA !
+        <div class="progress-bar">
+            <div class="progress" id="progress"></div>
+        </div>
+        
+        <div class="survey-content">
+            <!-- Question 1 -->
+            <div class="question active" id="question1">
+                <h3>Comment décririez-vous votre niveau d'énergie général ces derniers temps ?</h3>
+                <div class="options">
+                    <button class="option-btn" onclick="selectOption(1, 1)">Élevé - Je me sens plein d'énergie</button>
+                    <button class="option-btn" onclick="selectOption(1, 2)">Moyen - Ça va, mais pourrait être mieux</button>
+                    <button class="option-btn" onclick="selectOption(1, 3)">Faible - Je me sens souvent fatigué</button>
+                    <button class="option-btn" onclick="selectOption(1, 4)">Très faible - Épuisé la plupart du temps</button>
+                </div>
+                <div class="nav-buttons">
+                    <div></div>
+                    <button class="nav-btn btn-primary" onclick="nextQuestion()">Suivant</button>
+                </div>
             </div>
-
-            <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight mb-4 leading-tight text-yellow-500">
-                RÉACTIVEZ VOTRE PUISSANCE MASCULINE
-            </h1>
-            <p class="text-xl sm:text-2xl font-light text-gray-300 mb-6">
-                La formule 100% naturelle pour l'Homme qui refuse de ralentir. **Énergie et Endurance Retrouvées.**
-            </p>
-
-            <!-- Trust Badges -->
-            <div class="flex flex-wrap justify-center gap-4 text-sm font-semibold mt-6">
-                <span class="bg-gray-800 text-green-400 px-3 py-1 rounded-full border border-green-400">✅ 100% NATUREL</span>
-                <span class="bg-gray-800 text-blue-400 px-3 py-1 rounded-full border border-blue-400">🔬 FORMULE VALIDÉE</span>
-                <span class="bg-gray-800 text-red-400 px-3 py-1 rounded-full border border-red-400">🇫🇷 FABRIQUÉ EN UE</span>
+            
+            <!-- Question 2 -->
+            <div class="question" id="question2">
+                <h3>Avec l'âge, avez-vous remarqué des changements dans votre vitalité ?</h3>
+                <div class="options">
+                    <button class="option-btn" onclick="selectOption(2, 1)">Non, tout semble normal</button>
+                    <button class="option-btn" onclick="selectOption(2, 2)">Quelques petits changements</button>
+                    <button class="option-btn" onclick="selectOption(2, 3)">Oui, des changements notables</button>
+                    <button class="option-btn" onclick="selectOption(2, 4)">Des changements significatifs</button>
+                </div>
+                <div class="nav-buttons">
+                    <button class="nav-btn btn-secondary" onclick="prevQuestion()">Retour</button>
+                    <button class="nav-btn btn-primary" onclick="nextQuestion()">Suivant</button>
+                </div>
             </div>
-        </header>
-
-        <!-- MAIN CONTENT -->
-        <main class="p-6 sm:p-8">
             
-            <!-- CTA 1 - High Priority -->
-            <div class="bg-green-50 p-6 rounded-xl border-4 border-green-500 mb-10 text-center shadow-lg">
-                <h2 class="text-2xl font-bold text-gray-800 mb-4">Votre Temps Presse : L'Offre Se Termine Dans :</h2>
-                <div id="countdown" class="flex justify-center space-x-4 text-4xl font-extrabold mb-6">
-                    <!-- Timer Units go here -->
+            <!-- Question 3 -->
+            <div class="question" id="question3">
+                <h3>Quelle approche avez-vous déjà essayée pour améliorer votre bien-être ?</h3>
+                <div class="options">
+                    <button class="option-btn" onclick="selectOption(3, 1)">Exercice et nutrition</button>
+                    <button class="option-btn" onclick="selectOption(3, 2)">Compléments vitaminiques</button>
+                    <button class="option-btn" onclick="selectOption(3, 3)">Gestion du stress</button>
+                    <button class="option-btn" onclick="selectOption(3, 4)">Je n'ai rien essayé de spécifique</button>
                 </div>
-                
-                <a href="https://cd.convsw.com/CA5Lf38bJC" class="cta-button bg-green-500 hover:bg-green-600 text-white w-full sm:w-auto px-8 py-4 rounded-full text-xl font-extrabold uppercase inline-block">
-                    OUI, JE VEUX MA PROMOTION EXCLUSIVE →
-                </a>
-                <p class="text-sm text-gray-500 mt-3 font-semibold">Garantie 30 jours | Livraison discrète GRATUITE</p>
+                <div class="nav-buttons">
+                    <button class="nav-btn btn-secondary" onclick="prevQuestion()">Retour</button>
+                    <button class="nav-btn btn-primary" onclick="nextQuestion()">Suivant</button>
+                </div>
             </div>
-
-            <!-- BENEFITS SECTION -->
-            <section class="mb-10">
-                <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center border-b-2 border-gray-200 pb-3">Les 4 Piliers d'une Vie d'Homme Accomplie</h2>
-                
-                <div class="grid md:grid-cols-2 gap-6">
-                    <!-- Benefit Card 1 -->
-                    <div class="p-5 bg-gray-100 rounded-lg shadow-md border-l-4 border-green-600">
-                        <span class="text-4xl block mb-2">⚡</span>
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">Énergie de Marathonien</h3>
-                        <p class="text-gray-600">Finie la fatigue de l'après-midi. Retrouvez la vitalité durable pour dominer votre journée, du matin au soir.</p>
-                    </div>
-                    <!-- Benefit Card 2 -->
-                    <div class="p-5 bg-gray-100 rounded-lg shadow-md border-l-4 border-blue-600">
-                        <span class="text-4xl block mb-2">💪</span>
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">Résistance Physique Maximale</h3>
-                        <p class="text-gray-600">Soutenez votre corps et amplifiez votre endurance. Idéal pour le sport, le travail intense et les moments intimes.</p>
-                    </div>
-                    <!-- Benefit Card 3 -->
-                    <div class="p-5 bg-gray-100 rounded-lg shadow-md border-l-4 border-yellow-600">
-                        <span class="text-4xl block mb-2">🧠</span>
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">Clarté Mentale et Focus</h3>
-                        <p class="text-gray-600">Gardez l'esprit vif sous pression. Améliorez votre concentration et votre capacité à prendre des décisions rapides.</p>
-                    </div>
-                    <!-- Benefit Card 4 -->
-                    <div class="p-5 bg-gray-100 rounded-lg shadow-md border-l-4 border-red-600">
-                        <span class="text-4xl block mb-2">🚀</span>
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">Boost Naturel</h3>
-                        <p class="text-gray-600">Des ingrédients qui soutiennent naturellement l'équilibre hormonal, essentiel à la santé masculine après 30 ans.</p>
-                    </div>
-                </div>
-            </section>
             
-            <!-- INGREDIENTS SECTION (Authority) -->
-            <section class="mb-10 p-6 bg-gray-800 text-white rounded-xl shadow-inner">
-                <h2 class="text-3xl font-bold text-yellow-400 mb-6 text-center">Nos Ingrédients Clés : Le Secret d'une Formule Efficace</h2>
-                
-                <div class="grid sm:grid-cols-2 gap-4">
-                    <div class="flex items-center space-x-3">
-                        <span class="text-yellow-500 text-2xl">🌱</span>
-                        <div>
-                            <p class="font-bold">Tribulus Terrestris</p>
-                            <p class="text-sm text-gray-400">Le tonique traditionnel pour la vitalité masculine.</p>
-                        </div>
-                    </div>
-                    <div class="flex items-center space-x-3">
-                        <span class="text-yellow-500 text-2xl">🌿</span>
-                        <div>
-                            <p class="font-bold">Maca (Racine des Andes)</p>
-                            <p class="text-sm text-gray-400">Soutient l'endurance physique et l'humeur.</p>
-                        </div>
-                    </div>
-                    <div class="flex items-center space-x-3">
-                        <span class="text-yellow-500 text-2xl"> Ginseng</span>
-                        <div>
-                            <p class="font-bold">Ginseng (Panax)</p>
-                            <p class="text-sm text-gray-400">Aide à combattre le stress et la fatigue chronique.</p>
-                        </div>
-                    </div>
-                    <div class="flex items-center space-x-3">
-                        <span class="text-yellow-500 text-2xl">🧪</span>
-                        <div>
-                            <p class="font-bold">Zinc + Vitamines B</p>
-                            <p class="text-sm text-gray-400">Essentiels pour la fonction hormonale normale et le métabolisme énergétique.</p>
-                        </div>
-                    </div>
+            <!-- Question 4 -->
+            <div class="question" id="question4">
+                <h3>À quel point êtes-vous satisfait de votre confiance en vous actuellement ?</h3>
+                <div class="options">
+                    <button class="option-btn" onclick="selectOption(4, 1)">Très satisfait</button>
+                    <button class="option-btn" onclick="selectOption(4, 2)">Assez satisfait</button>
+                    <button class="option-btn" onclick="selectOption(4, 3)">Peu satisfait</button>
+                    <button class="option-btn" onclick="selectOption(4, 4)">Pas du tout satisfait</button>
                 </div>
-            </section>
+                <div class="nav-buttons">
+                    <button class="nav-btn btn-secondary" onclick="prevQuestion()">Retour</button>
+                    <button class="nav-btn btn-primary" onclick="showResults()">Voir les résultats</button>
+                </div>
+            </div>
             
-            <!-- TESTIMONIALS (Social Proof) -->
-            <section class="mb-10">
-                <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">Ce que les Hommes Disent (Avis Vérifiés)</h2>
+            <!-- Results Page -->
+            <div class="results" id="results">
+                <h2>🎯 Analyse de vos réponses</h2>
+                <p>Sur la base de vos réponses, vous pourriez bénéficier d'une approche naturelle pour soutenir votre vitalité et votre bien-être masculin.</p>
+                <p><strong>86%</strong> des hommes ayant un profil similaire ont rapporté des améliorations significatives en incorporant des solutions naturelles dans leur routine.</p>
+                <p>Découvrez une approche innovante qui combine des ingrédients naturels et des recherches modernes pour soutenir votre santé masculine.</p>
                 
-                <div class="space-y-6">
-                    <div class="p-5 bg-blue-50 rounded-lg border-2 border-blue-200 italic text-gray-700">
-                        <p class="mb-3">"Je pensais que c'était le début de la fin après 45 ans. Faux ! J'ai retrouvé une drive incroyable, au bureau comme à la maison. C'est le coup de pouce qu'il me fallait."</p>
-                        <p class="font-bold text-blue-800 not-italic">- David M., 46 ans, Ingénieur</p>
-                    </div>
-                    <div class="p-5 bg-blue-50 rounded-lg border-2 border-blue-200 italic text-gray-700">
-                        <p class="mb-3">"Simple, efficace, pas de blabla. Je dors mieux, mon énergie est stable. Je recommande à tous ceux qui sentent qu'ils ont besoin de 'rallumer la mèche'."</p>
-                        <p class="font-bold text-blue-800 not-italic">- Thomas L., 38 ans, Entrepreneur</p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- FINAL CTA -->
-            <div class="text-center p-8 bg-gradient-to-r from-green-500 to-emerald-600 rounded-xl shadow-2xl">
-                <h2 class="text-3xl font-extrabold text-white mb-4">NE LAISSEZ PAS CETTE CHANCE VOUS ÉCHAPPER</h2>
-                <p class="text-xl text-yellow-200 mb-6 font-semibold">L'inventaire est faible et l'offre expire bientôt.</p>
-
-                <a href="https://cd.convsw.com/CA5Lf38bJC" class="cta-button bg-black text-yellow-400 w-full sm:w-2/3 lg:w-1/2 px-8 py-5 rounded-full text-2xl font-extrabold uppercase inline-block ring-4 ring-yellow-400">
-                    SÉCURISEZ MA FORMULE MAINTENANT →
-                </a>
+                <button class="cta-button" onclick="redirectToOffer()">
+                    Découvrir la Solution Naturelle ✓
+                </button>
                 
-                <p class="text-sm text-white mt-4 flex items-center justify-center space-x-2">
-                    <!-- Lock Icon SVG -->
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-lock-keyhole"><circle cx="12" cy="16" r="1"></circle><rect width="18" height="12" x="3" y="10" rx="2"></rect><path d="M7 10V7a5 5 0 0 1 10 0v3"></path></svg>
-                    <span>Paiement 100% Sécurisé et Discret.</span>
+                <p style="font-size: 12px; margin-top: 15px; color: #95a5a6;">
+                    ⚠️ Ces résultats sont fournis à titre informatif uniquement<br>
+                    Consultez toujours un professionnel de santé avant de commencer un nouveau complément
                 </p>
             </div>
-            
-            <!-- DISCLAIMER FOOTNOTE -->
-            <div class="mt-8 p-4 bg-gray-50 rounded-lg border border-gray-200 text-xs text-gray-500">
-                <p><strong>Clause de Non-Responsabilité :</strong> Ce produit est un complément alimentaire. Ces affirmations n'ont pas été évaluées par les autorités sanitaires. Ce produit n'est pas destiné à diagnostiquer, traiter, guérir ou prévenir aucune maladie. Les résultats peuvent varier d'une personne à l'autre. Veuillez consulter votre professionnel de la santé avant utilisation.</p>
-            </div>
-        </main>
-
-        <!-- FOOTER -->
-        <footer class="bg-gray-900 text-gray-400 text-center p-6 text-sm">
-            <p>&copy; 2024 Vitalité Alpha. Tous droits réservés.</p>
-            <div class="mt-3 space-x-4">
-                <a href="https://cd.convsw.com/CA5Lf38bJC" class="hover:text-white transition duration-200">Mentions légales</a>
-                <a href="https://cd.convsw.com/CA5Lf38bJC" class="hover:text-white transition duration-200">Politique de confidentialité</a>
-                <a href="https://cd.convsw.com/CA5Lf38bJC" class="hover:text-white transition duration-200">Conditions</a>
-            </div>
-        </footer>
+        </div>
+        
+        <div class="privacy">
+            <p>Nous respectons votre vie privée. Vos réponses sont confidentielles et protégées.</p>
+        </div>
     </div>
 
     <script>
-        // JavaScript for the Countdown Timer
-        function startCountdown() {
-            // Set the expiry time (e.g., 20 minutes from now)
-            const durationInMinutes = 20;
-            let countDownDate = new Date().getTime() + durationInMinutes * 60 * 1000;
-
-            const x = setInterval(function() {
-                const now = new Date().getTime();
-                const distance = countDownDate - now;
-
-                // Time calculations for minutes and seconds
-                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-                const countdownElement = document.getElementById("countdown");
-
-                // Display the result
-                if (countdownElement) {
-                    countdownElement.innerHTML = `
-                        <div class="timer-unit text-red-500 px-3 py-1 rounded-lg">
-                            <span class="block">${minutes.toString().padStart(2, '0')}</span>
-                            <span class="text-sm font-normal text-gray-400">MIN</span>
-                        </div>
-                        <div class="text-red-500 font-extrabold text-5xl">:</div>
-                        <div class="timer-unit text-red-500 px-3 py-1 rounded-lg">
-                            <span class="block">${seconds.toString().padStart(2, '0')}</span>
-                            <span class="text-sm font-normal text-gray-400">SEC</span>
-                        </div>
-                    `;
-                }
-
-                // If the count down is finished, write some text
-                if (distance < 0) {
-                    clearInterval(x);
-                    if (countdownElement) {
-                        countdownElement.innerHTML = `<span class="text-xl text-red-500">OFFRE EXPIRÉE !</span>`;
-                    }
-                    // Optionally change the CTA button style or text here
-                }
-            }, 1000);
+        let currentQuestion = 1;
+        const totalQuestions = 4;
+        const answers = {};
+        
+        function updateProgress() {
+            const progress = ((currentQuestion - 1) / totalQuestions) * 100;
+            document.getElementById('progress').style.width = progress + '%';
         }
-
-        // Start the countdown when the page loads
-        window.onload = startCountdown;
+        
+        function selectOption(question, option) {
+            answers[question] = option;
+            // Remove active class from all options in current question
+            const options = document.querySelectorAll(`#question${question} .option-btn`);
+            options.forEach(opt => opt.style.borderColor = '#ecf0f1');
+            
+            // Add active class to selected option
+            event.target.style.borderColor = '#3498db';
+            event.target.style.background = '#f8f9fa';
+        }
+        
+        function nextQuestion() {
+            if (currentQuestion < totalQuestions) {
+                document.getElementById(`question${currentQuestion}`).classList.remove('active');
+                currentQuestion++;
+                document.getElementById(`question${currentQuestion}`).classList.add('active');
+                updateProgress();
+            }
+        }
+        
+        function prevQuestion() {
+            if (currentQuestion > 1) {
+                document.getElementById(`question${currentQuestion}`).classList.remove('active');
+                currentQuestion--;
+                document.getElementById(`question${currentQuestion}`).classList.add('active');
+                updateProgress();
+            }
+        }
+        
+        function showResults() {
+            document.getElementById(`question${currentQuestion}`).classList.remove('active');
+            document.getElementById('results').style.display = 'block';
+            document.getElementById('progress').style.width = '100%';
+        }
+        
+        function redirectToOffer() {
+            // Replace with your actual offer URL
+            window.location.href = 'https://cd.convsw.com/?a=115601&c=399963&co=317488&mt=26';
+        }
+        
+        // Initialize progress bar
+        updateProgress();
     </script>
 </body>
 </html>
